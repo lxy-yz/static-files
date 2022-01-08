@@ -1,0 +1,9 @@
+function FindProxyForURL(url, host) {
+	PROXY = "HTTP 192.168.0.105:8080; HTTPS 192.168.0.105:8080"
+
+	if (shExpMatch(host, "*.notion.*")) {
+		return PROXY;
+	}
+
+	return "DIRECT";
+}
