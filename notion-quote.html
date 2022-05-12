@@ -193,6 +193,9 @@
                 const font = localStorage.getItem('font') || 'sans';
                 changeFont(font);
 
+                const mode = localStorage.getItem('mode');
+                if (mode) changeMode(mode);
+
                 size = localStorage.getItem('size') || 1.5;
                 setSize(size);
             }
